@@ -79,14 +79,13 @@ write.table(b4, file=paste0(basedir, "../b4.csv"), sep=",", row.names=FALSE, col
 # Either run this whole script to plot onto one page,
 # or paste these paragraphs into the R console for individual plots.
 
-basedir <- "../bearing_IMS/1st_test/"
 b1 <- read.table(file=paste0(basedir, "../b1.csv"), sep=",", header=FALSE)
 b2 <- read.table(file=paste0(basedir, "../b2.csv"), sep=",", header=FALSE)
 b3 <- read.table(file=paste0(basedir, "../b3.csv"), sep=",", header=FALSE)
 b4 <- read.table(file=paste0(basedir, "../b4.csv"), sep=",", header=FALSE)
 
 
-par(mfrow=c(5,2))
+par(mfrow=c(2,4))
 
 # x axis components
 plot(b1[, 2], pch=4, col="dodgerblue2", ylab="Frequency", main="1st strongest x", ylim=c(0, 2))
